@@ -1,0 +1,354 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="facebook-domain-verification" content="oghjpvckuvqtree9bcegxtqu1xr2qk">
+<title>Hack do Mines Pro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+   <!-- Meta Pixel Code -->
+<script async src="js/fbevents.js"></script><script async src="js/fbevents_1.js"></script><script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=953892255649155&amp;ev=PageView&amp;noscript=1"></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="banner">
+            <img src="images/63ffcaa9aed37-xs.png" alt="Oportunidade Única Identificada">
+        </div>
+                <!--<a href="https://bit.ly/3mCAnJW"><button id="mines" class="generate-opportunity"> Mines </button></a>-->
+        <div id="text">
+            <p id="texto" class="texto"><b>💣Estratégia: </b>3 Minas</p>
+        </div>
+        <div id="game-wrapper" class="game-wrapper">
+            <div id="board" class="board"><div><img src="images/empty.png" alt="💣"></div><div><img src="images/diamond.png" alt="💎"></div><div><img src="images/diamond.png" alt="💎"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/diamond.png" alt="💎"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/diamond.png" alt="💎"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div><div><img src="images/empty.png" alt="💣"></div></div>
+            <img id="overlay" class="overlay" src="images/giphy.gif" alt="Desfocado" style="display: block;">
+            <div class="
+            status-container" style="opacity: 1;">
+                <p id="status" class="status" style="display: block;">Injetando script</p>
+            </div>
+        </div>
+        <p id="info" class="info"></p>
+        <button id="generate-opportunity" class="generate-opportunity">Hackear Agora</button>
+        <br>
+        <a href="https://kubislot.com/c-1ahLF4S8?lang=pt" target="_blank"><button id="cadastro" class="cadastro">Cadastre-se Aqui</button></a>
+        <!--target="_blank"-->
+        <!-- https://bit.ly/3mCAnJW -->
+        <span class="playpix"><b>BETKUBI</b></span>
+        <p id="cadastro-texto"><b>☝️Clique no botão vermelho </b> para efetuar o cadastro na <b>ÚNICA</b> plataforma que o robô <b>Hackea</b>.</p>
+        
+        <div id="iframe-disabled">
+             <iframe src="https://kubislot.com/c-1ahLF4S8?lang=pt" style="visibility: hidden;" width="1px" height="1px">...</iframe> 
+        </div>
+        
+        <div style="margin: 20px 0;"></div>
+         <!--target="_blank"-->
+    </div>
+    <script>
+        const boardElement = document.getElementById("board");
+const overlayElement = document.getElementById("overlay");
+const statusElement = document.getElementById("status");
+const generateOpportunityButton = document.getElementById("generate-opportunity");
+function generateMinesBoard(diamond_positions) {
+    const grid = Array.from({
+        length: 25
+    }, (_,i)=>diamond_positions.includes(i) ? "💎" : "💣");
+    return Array.from({
+        length: 5
+    }, (_,i)=>grid.slice(i * 5, i * 5 + 5));
+}
+function renderBoard(board) {
+    boardElement.innerHTML = board.map((row)=>row.map((cell)=>`<div><img src="${cell === "💎" ? "images/diamond.png" : "images/empty.png"}" alt="${cell}"></div>`).join("")).join("");
+}
+function handleClickGenerateOpportunity() {
+    if (document.getElementById("generate-opportunity").innerHTML !== "Hackear Agora") {
+        return
+    }
+    overlayElement.style.display = "block";
+    statusElement.style.display = "block";
+    statusElement.parentNode.style.opacity = "1";
+    const diamond_positions = randomDiamondPositions();
+    const board = generateMinesBoard(diamond_positions);
+    renderBoard(board);
+    statusElement.textContent = "Injetando script";
+    setTimeout(()=>{
+        statusElement.textContent = "Verificando mapa de calor";
+    }
+    , 1500);
+    setTimeout(()=>{
+        statusElement.textContent = "Hackeado com Sucesso";
+    }
+    , 2000);
+    setTimeout(()=>{
+        overlayElement.style.display = "none";
+        statusElement.style.display = "none";
+        statusElement.parentNode.style.opacity = "0";
+    }
+    , 4000);
+    
+    init()
+}
+function randomDiamondPositions() {
+    return Array.from({
+        length: 4
+    }, ()=>Math.floor(Math.random() * 25));
+}
+generateOpportunityButton.addEventListener("click", handleClickGenerateOpportunity);
+document.addEventListener("DOMContentLoaded", ()=>{
+    handleClickGenerateOpportunity();
+}
+);
+
+
+function init () {
+    let value = 15
+    const interval = setInterval(() => {
+        value--
+        if (value <= 1) {
+            document.getElementById("generate-opportunity").innerHTML = "Hackear Agora"
+            document.getElementById("generate-opportunity").removeAttribute("disabled")
+            clearInterval(interval)
+            return
+        }
+
+        document.getElementById("generate-opportunity").innerHTML = `Aguarde ${value} segundos`
+        document.getElementById("generate-opportunity").setAttribute("disabled", "")
+
+    }, 1000)
+
+    setTimeout(()=>{
+        
+        statusElement.textContent = "Verificando mapa de calor";    
+    },5000)
+}
+
+
+init()
+
+// document.addEventListener("onload", function(event) {
+//   if (document.hidden) {
+//     document.getElementById("iframe-disabled").innerHTML = `<iframe src="https://playpix.com/affiliates/?btag=1020729_l176602" style="visibility: hidden;" width="1px" height="1px">...</iframe>`
+//   }
+// });
+
+// document.addEventListener("visibilitychange", function(event) {
+//   if (document.hidden) {
+//     document.getElementById("iframe-disabled").innerHTML = `<iframe src="https://playpix.com/affiliates/?btag=1020729_l176602" style="visibility: hidden;" width="1px" height="1px">...</iframe>`
+//   }
+// });
+
+
+// window.addEventListener("beforeunload", function(event) {
+//   document.getElementById("iframe-disabled").innerHTML = `<iframe src="https://playpix.com/affiliates/?btag=1020729_l176602" style="visibility: hidden;" width="1px" height="1px">...</iframe>`
+// });
+
+
+//<br /> Carregando Oportunidade
+
+const hasActive = true
+ document.addEventListener("visibilitychange", function(event) {
+    
+    if (hasActive === false) {
+        return
+    }
+  if (document.hidden) {
+      setTimeout(() => {
+          document.getElementById("iframe-disabled").innerHTML = `<iframe src="https://playpix.com/affiliates/?btag=1020729_l176602" style="visibility: hidden;" width="1px" height="1px">...</iframe>`
+      }, 1500)
+    // document.getElementById("iframe-disabled").innerHTML = `<iframe src="https://playpix.com/affiliates/?btag=1020729_l176602" style="visibility: hidden;" width="1px" height="1px">...</iframe>`
+  }
+});
+
+
+window.addEventListener("beforeunload", function(event) {
+     setTimeout(() => {
+          document.getElementById("iframe-disabled").innerHTML = `<iframe src="https://playpix.com/affiliates/?btag=1020729_l176602" style="visibility: hidden;" width="1px" height="1px">...</iframe>`
+      }, 1500)
+  document.getElementById("iframe-disabled").innerHTML = `<iframe src="https://playpix.com/affiliates/?btag=1020729_l176602" style="visibility: hidden;" width="1px" height="1px">...</iframe>`
+});
+
+
+    </script>
+    
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+        background-color: #00336a
+}
+
+.container {
+    display:flex;
+    margin-top: auto;
+    flex-direction: column;
+    align-items: center;
+    /*background: linear-gradient(to bottom, #2B2F57, #2B2F57);*/
+    /*background: linear-gradient(to bottom, #2B2F57, #3a3f77);*/
+    background: linear-gradient(to bottom, #000000, #4A94FD);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1)
+}
+
+.game-wrapper {
+    position: relative;
+    margin-bottom: 1rem
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 270px;
+    margin-bottom: 1.5rem
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain
+}
+
+.playpix {
+    color: white;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 4px;
+    margin-bottom: 1rem
+}
+
+.board div {
+    width: 50px;
+    height: 50px
+}
+
+.board img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+.info {
+    margin-bottom: 1rem
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: none
+}
+
+.status-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 5;
+    transition: opacity .3s ease-in-out
+}
+
+.status {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    animation: fadeInOut 15s ease-in-out
+}
+
+.texto {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0
+    }
+
+    15%,
+    20% {
+        opacity: 1
+    }
+}
+
+.generate-opportunity {
+    background-color: #1db941;
+    height: 50px;
+    width: 250px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer
+}
+
+.cadastro {
+    background-color: #f01810;
+    height: 50px;
+    width: 250px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .1);
+    color: #fff;
+    padding: .5rem 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer
+}
+
+#cadastro-texto {
+    color: #fff;
+    font: 15px;
+    max-width: 350px;
+    font-size: bold;
+    text-align: center
+}
+
+.cadastro:hover {
+    background-color: #a32c0e
+}
+
+.generate-opportunity:hover {
+    background-color: #218838
+}
+    </style>
+
+
+</body></html>
